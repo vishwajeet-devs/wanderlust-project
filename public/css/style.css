@@ -1,8 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
 .navbar {
     height: 5rem;
 
-    background: rgba(255, 255, 255, 0.6); /* semi-transparent */
-    backdrop-filter: blur(12px);          /* glass blur */
+    background: rgba(255, 255, 255, 0.692); /* semi-transparent */
+    backdrop-filter: blur(40px);          /* glass blur */
     -webkit-backdrop-filter: blur(12px);  /* Safari support */
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -16,6 +26,14 @@
 
 .nav-link {
     color: #222222 !important;
+}
+
+.f-info-social{
+    font-size: 1.2rem;
+}
+
+.f-info-social .icon {
+    padding: 2px;
 }
 
 .f-info-links a {
@@ -66,4 +84,10 @@
 .card-img-overlay:hover {
     opacity: 0.2;
     background-color: white;
+}
+
+/* new */
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
 }
