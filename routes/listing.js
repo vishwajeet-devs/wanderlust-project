@@ -1,0 +1,66 @@
+const express = require("express");
+const router = express.Router();
+const wrapAsync = require("../utils/wrapAsync.js");
+const ExpressError = require("../utils/ExpressError.js");
+const { listingSchema, reviewSchema } = require("../schema.js");
+const Listing = require("../models/listing.js");
+
+
+// mddleware function for schema validations
+const validateListing = (req, res, next) => {
+    let { error } = listingSchema.validate(req.body);
+    if(error){
+        let errMsg = error.details.map((el) => el.message).join(",");
+        throw new ExpressError(404, errMsg);
+    } else next();
+}
+
+// Index
+router.get("/", wrapAsync(async (req, res, next) => {
+    let allListings = await Listing.find({});
+    res.render("listings/index.ejs", { allListings });
+}));
+
+// New
+router.get("/new", (req, res) => {
+    res.render("listings/new.ejs");
+})
+
+router.post("/", validateListing, wrapAsync(async (req, res, next) => {
+    let  listing = req.body.listing;
+    await Listing.create(listing);
+    res.redirect("/listings");
+}));
+
+// show 
+router.get("/:id", wrapAsync(async (req, res, next) => {
+    let { id } = req.params;
+    const listing = await Listing.findById(id).populate("reviews");
+    res.render("listings/show.ejs", { listing });
+}));
+
+// edit
+router.get("/:id/edit", wrapAsync(async (req, res) => {
+    let { id } = req.params;
+    let listing = await Listing.findById(id);
+    res.render("listings/edit.ejs", { listing });
+}));
+
+router.put("/:id", validateListing, wrapAsync(async (req, res) => {
+    if(!req.body.listing){
+        throw new ExpressError(400, "send valid data for listing");
+    }
+    let { id } = req.params;
+    let newListing = req.body.listing;
+    await Listing.findByIdAndUpdate(id, newListing);
+    res.redirect(`/listings/${id}`);
+}));
+
+// Delete listing
+router.delete("/:id", wrapAsync(async (req, res) => {
+    let { id } = req.params;
+    await Listing.findByIdAndDelete(id);
+    res.redirect("/listings");
+}));
+
+module.exports = router;

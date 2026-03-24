@@ -10,8 +10,8 @@ const listeningSchema = new Schema({
     description: String,
     image: {
         type: String,
-        default: "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg",
-        set: (v) => v===""? "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg" : v,
+        default: "https://play-lh.googleusercontent.com/5WTYuaEvBSQ3Eh_YbzH-MCwQeB3wdEvXoxXGVDtvpeFSunyeXbVwjmul6y5J1d2rKeg",
+        set: (v) => v===""? "https://play-lh.googleusercontent.com/5WTYuaEvBSQ3Eh_YbzH-MCwQeB3wdEvXoxXGVDtvpeFSunyeXbVwjmul6y5J1d2rKeg" : v,
     },
     price: Number,
     location: String,
