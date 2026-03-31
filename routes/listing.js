@@ -8,11 +8,14 @@ const { validateListing } = require("../middleware.js");
 
 const { index, renderNewForm, createListing, showListing, editListing, updateListing, deleteListing } = require("../controlllers/listings.js"); 
 
+const multer  = require('multer');
+const { storage } = require("../cloudConfig.js");
+const upload = multer({ storage });
 
 router
     .route("/")
     .get(wrapAsync(index))
-    .post(isLogedIn, validateListing, createListing);
+    .post(isLogedIn, upload.single("listing[image]"), validateListing, wrapAsync(createListing));
 
 router.get("/new", isLogedIn, renderNewForm);
 
