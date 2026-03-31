@@ -8,24 +8,20 @@ const { validateListing } = require("../middleware.js");
 
 const { index, renderNewForm, createListing, showListing, editListing, updateListing, deleteListing } = require("../controlllers/listings.js"); 
 
-// Index
-router.get("/", wrapAsync(index));
 
-// New
+router
+    .route("/")
+    .get(wrapAsync(index))
+    .post(isLogedIn, validateListing, createListing);
+
 router.get("/new", isLogedIn, renderNewForm);
-//create
-router.post("/", isLogedIn, validateListing, createListing);
 
-// show 
-router.get("/:id", wrapAsync(showListing));
+router
+    .route("/:id")
+    .get(wrapAsync(showListing))
+    .put(isLogedIn, isOwner, validateListing, wrapAsync(updateListing))
+    .delete(isLogedIn, isOwner, wrapAsync(deleteListing));
 
-// edit
 router.get("/:id/edit", isLogedIn, isOwner, wrapAsync(editListing));
-
-//update
-router.put("/:id", isLogedIn, isOwner, validateListing, wrapAsync(updateListing));
-
-// Delete listing
-router.delete("/:id", isLogedIn, isOwner, wrapAsync(deleteListing));
 
 module.exports = router;
