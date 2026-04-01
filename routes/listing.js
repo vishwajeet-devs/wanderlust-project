@@ -22,7 +22,7 @@ router.get("/new", isLogedIn, renderNewForm);
 router
     .route("/:id")
     .get(wrapAsync(showListing))
-    .put(isLogedIn, isOwner, validateListing, wrapAsync(updateListing))
+    .put(isLogedIn, isOwner, upload.single("listing[image]"), validateListing, wrapAsync(updateListing))
     .delete(isLogedIn, isOwner, wrapAsync(deleteListing));
 
 router.get("/:id/edit", isLogedIn, isOwner, wrapAsync(editListing));
