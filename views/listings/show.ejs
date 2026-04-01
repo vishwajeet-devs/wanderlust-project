@@ -1,10 +1,13 @@
 <%- layout("/layouts/boilerplate") %>
+<script>
+    let mapToken = "<%= process.env.MAP_TOKEN %>";
+</script>
 <body>
     <div class="row">
-        <div class="col-8 offset-3">
+        <div class="col-8 offset-2">
             <h3><b><%= listing.title %></b><br></h3>
         </div>
-        <div class="show-card col-6 offset-3 mb-4 listing-card">
+        <div class="show-card col-6 offset-2 mb-4 listing-card">
             <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
             <div class="card-body">
                 <p class="card-text">Owned by <b><i><%= listing.owner.username %></i></b></p>
@@ -28,7 +31,7 @@
         <% } %>
 
         <!-- reviews section -->
-        <div class="col-8 offset-3 mb-3">
+        <div class="col-8 offset-2 mb-3">
             <hr>
             <% if(currUser) { %>
                 <h4>Leave a review</h4>
@@ -65,8 +68,9 @@
                 <hr>
             <% } %>
             
-            <p><b>All reviews</b><p>
+            <% if(listing.reviews.length > 0){ %>
             <div class="row">
+                <p><b>All reviews</b><p>
                 <% for(review of listing.reviews) { %>
                     <div class="card ms-3 mb-3 col-5">
                         <div class="card-body">
@@ -82,6 +86,12 @@
                     </div>
                 <% } %>
             </div>
+            <% } %>
+        </div>
+        <div class="col-8 offset-2 mb-3">
+            <h3>Where  you'll be</h3>
+            <div id="map"></div>    
         </div>
     </div>
+<script src="/js/map.js"></script>
 </body>
