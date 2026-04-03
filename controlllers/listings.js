@@ -66,8 +66,18 @@ module.exports.updateListing = async (req, res) => {
     if(!req.body.listing){
         throw new ExpressError(400, "send valid data for listing");
     }
+
+    let response = await geocodingClient
+        .forwardGeocode({
+          query: req.body.listing.location,
+          limit: 1
+        })
+          .send();
+
     let { id } = req.params;
     let newListing = req.body.listing;
+    newListing.geometry = response.body.features[0].geometry;
+    
     let listing = await Listing.findByIdAndUpdate(id, newListing);
 
     if(typeof req.file != "undefined"){
