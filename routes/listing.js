@@ -6,7 +6,7 @@ const { isLogedIn } = require("../middleware.js");
 const { isOwner } = require("../middleware.js");
 const { validateListing } = require("../middleware.js"); 
 
-const { index, renderNewForm, createListing, showListing, editListing, updateListing, deleteListing } = require("../controlllers/listings.js"); 
+const { index, renderNewForm, createListing, showListing, editListing, updateListing, deleteListing, searchList } = require("../controlllers/listings.js"); 
 
 const multer  = require('multer');
 const { storage } = require("../cloudConfig.js");

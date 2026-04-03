@@ -97,6 +97,11 @@
         </div>
 
         <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+            <% if(allListings.length==0) { %>
+                <div class="d-flex justify-content-center align-items-center w-100" style="height: 60vh;">
+                    <h1 style="color: rgb(165, 165, 165)">Listing not found !</h1>
+                </div>          
+            <% } %>
             <% for(let listing of allListings) { %>
                 <a href="/listings/<%=listing._id%>" class="listing-link">
                     <div class="card col listing-card" style="width: 18rem;">
@@ -125,4 +130,13 @@
                 else info.style.display = "none";
             }
         })
+
+        const input = document.querySelector(".search-input");
+
+        input.addEventListener("input", () => {
+            if (input.value === "") {
+                input.form.submit();
+            }
+        });
+
     </script>
