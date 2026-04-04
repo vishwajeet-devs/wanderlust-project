@@ -33,12 +33,30 @@
                         <div class="invalid-feedback">Country name shold be valid</div>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Location</label>
-                    <input name="listing[location]" placeholder="enter location" type="text" required class="form-control">
-                    <div class="invalid-feedback">Location should be valid</div>
+                <div class="row">
+                    <div class="mb-3 col-md-8">
+                        <label class="form-label">Location</label>
+                        <input name="listing[location]" placeholder="enter location" type="text" required class="form-control">
+                        <div class="invalid-feedback">Location should be valid</div>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label">Select Category</label>
+                        <select name="listing[category]" class="form-select" required>
+                            <option value="">Select Category</option>
+                            <option value="room">Room</option>
+                            <option value="iconicCities">Iconic Cities</option>
+                            <option value="mountains">Mountains</option>
+                            <option value="castles">Castles</option>
+                            <option value="amazingpools">Amazing pools</option>
+                            <option value="camping">Camping</option>
+                            <option value="farms">Farms</option>
+                            <option value="arctic">Arctic</option>
+                            <option value="domes">Domes</option>
+                            <option value="boats">Boats</option>
+                        </select>
+                    </div>
                 </div>
-
+                
                 <button class="btn btn-dark add-btn mb-3">Add</button>
             </div>
         </div>
