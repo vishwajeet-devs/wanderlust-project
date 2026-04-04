@@ -358,6 +358,259 @@ const sampleListings = [
         reviews: [],
         owner: "69c924b8eb03dabef49282fc",
         geometry: { type: "Point", coordinates: [77.32576, 18.453909] }
+    },
+    {
+        title: "Glass Igloo in Lapland",
+        description: "Sleep under the Northern Lights in a stunning heated glass igloo. Watch the aurora borealis dance across the sky from the comfort of your warm bed deep in the Finnish wilderness.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1531906401853-9e56ebad4da2?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 3800,
+        location: "Rovaniemi",
+        country: "Finland",
+        category: "arctic",
+        reviews: [],
+        owner: "69c51e90948ab9b69d484718",
+        geometry: { type: "Point", coordinates: [25.7294, 66.5039] }
+    },
+ 
+    // 2. domes
+    {
+        title: "Geodesic Dome in the Sahara",
+        description: "A luxury geodesic dome sitting in the heart of the Sahara Desert. Stargaze through your transparent ceiling, enjoy camel rides at sunrise, and experience the silence of the dunes.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 2800,
+        location: "Merzouga",
+        country: "Morocco",
+        category: "domes",
+        reviews: [],
+        owner: "69c924b8eb03dabef49282fc",
+        geometry: { type: "Point", coordinates: [-4.0122, 31.1000] }
+    },
+ 
+    // 3. boats
+    {
+        title: "Houseboat on Dal Lake",
+        description: "A traditional wooden houseboat floating on the serene Dal Lake, adorned with intricate Kashmiri carvings. Wake up to mist-covered mountains and enjoy breakfast served by a shikara boat.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 950,
+        location: "Srinagar",
+        country: "India",
+        category: "boats",
+        reviews: [],
+        owner: "69c928d53ace3d6ffd5553c7",
+        geometry: { type: "Point", coordinates: [74.7973, 34.0837] }
+    },
+ 
+    // 4. castles
+    {
+        title: "Medieval Castle in Loire Valley",
+        description: "Stay inside a fully restored 13th-century castle surrounded by vineyards and moats. Feast in the grand banquet hall, explore secret passages, and sip on local wine as the sun sets over the valley.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1548625149-720f6e240e17?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 5500,
+        location: "Loire Valley",
+        country: "France",
+        category: "castles",
+        reviews: [],
+        owner: "69cbcdbd8a950bb6b6906add",
+        geometry: { type: "Point", coordinates: [0.6848, 47.3941] }
+    },
+ 
+    // 5. amazingpools
+    {
+        title: "Clifftop Villa with Infinity Pool in Santorini",
+        description: "A dazzling white-washed villa perched on the caldera cliffs of Santorini. Dive into your private infinity pool that seems to merge with the Aegean Sea, and watch the world-famous Oia sunset.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 4500,
+        location: "Santorini",
+        country: "Greece",
+        category: "amazingpools",
+        reviews: [],
+        owner: "69c51e90948ab9b69d484718",
+        geometry: { type: "Point", coordinates: [25.4615, 36.3932] }
+    },
+ 
+    // 6. farms
+    {
+        title: "Lavender Farm Stay in Provence",
+        description: "Wake up surrounded by rolling fields of purple lavender on this working farm in the heart of Provence. Enjoy farm-fresh breakfast, guided nature walks, and peaceful evenings under a canopy of stars.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 1300,
+        location: "Provence",
+        country: "France",
+        category: "farms",
+        reviews: [],
+        owner: "69c928d53ace3d6ffd5553c7",
+        geometry: { type: "Point", coordinates: [5.3698, 43.8367] }
+    },
+ 
+    // 7. camping
+    {
+        title: "Luxury Glamping Pod in New Zealand",
+        description: "A cozy pod nestled in the misty forests of Fiordland, just minutes from Milford Sound. Fall asleep to the sound of waterfalls and wake up to kiwi birds calling in the ancient rainforest.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 1100,
+        location: "Fiordland",
+        country: "New Zealand",
+        category: "camping",
+        reviews: [],
+        owner: "69c924b8eb03dabef49282fc",
+        geometry: { type: "Point", coordinates: [167.9290, -45.4142] }
+    },
+ 
+    // 8. mountains
+    {
+        title: "Himalayan Stone Cottage in Manali",
+        description: "A rustic stone cottage tucked in the snow-dusted peaks of the Himalayas. Perfect for trekkers and nature lovers — enjoy roaring fireplaces, apple orchards, and breathtaking views of Rohtang Pass.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 700,
+        location: "Manali",
+        country: "India",
+        category: "mountains",
+        reviews: [],
+        owner: "69c51e90948ab9b69d484718",
+        geometry: { type: "Point", coordinates: [77.1887, 32.2396] }
+    },
+ 
+    // 9. iconicCities
+    {
+        title: "Parisian Apartment Near the Eiffel Tower",
+        description: "A chic Haussmann-style apartment just two blocks from the Eiffel Tower. Sip your morning coffee on the iron balcony, stroll to the Champ de Mars, and live like a true Parisian.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 2700,
+        location: "Paris",
+        country: "France",
+        category: "iconicCities",
+        reviews: [],
+        owner: "69cbcdbd8a950bb6b6906add",
+        geometry: { type: "Point", coordinates: [2.3522, 48.8566] }
+    },
+ 
+    // 10. room
+    {
+        title: "Cozy Studio in Kyoto's Gion District",
+        description: "A minimalist Japanese studio in the heart of Gion, Kyoto's most atmospheric geisha district. Tatami mats, paper screens, and a bamboo garden make this the ultimate serene urban escape.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 1400,
+        location: "Kyoto",
+        country: "Japan",
+        category: "room",
+        reviews: [],
+        owner: "69c928d53ace3d6ffd5553c7",
+        geometry: { type: "Point", coordinates: [135.7681, 35.0116] }
+    },
+ 
+    // 11. arctic
+    {
+        title: "Arctic Wilderness Cabin in Tromsø",
+        description: "An off-grid cabin on the edge of a frozen fjord in Northern Norway. Dog-sledding, snowshoeing, and whale-watching tours depart right from your doorstep. Northern Lights almost guaranteed.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 3200,
+        location: "Tromsø",
+        country: "Norway",
+        category: "arctic",
+        reviews: [],
+        owner: "69c924b8eb03dabef49282fc",
+        geometry: { type: "Point", coordinates: [18.9553, 69.6492] }
+    },
+ 
+    // 12. boats
+    {
+        title: "Luxury Sailing Yacht in the Aegean",
+        description: "Charter a private luxury sailing yacht and island-hop across the Greek Aegean. Snorkel in hidden coves, dine on fresh seafood, and anchor under the stars at Paros, Naxos, and beyond.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 7500,
+        location: "Athens",
+        country: "Greece",
+        category: "boats",
+        reviews: [],
+        owner: "69cbcdbd8a950bb6b6906add",
+        geometry: { type: "Point", coordinates: [23.7275, 37.9838] }
+    },
+ 
+    // 13. domes
+    {
+        title: "Transparent Bubble Dome in Patagonia",
+        description: "Sleep inside a transparent bubble dome surrounded by the raw wilderness of Chilean Patagonia. Torres del Paine's jagged peaks frame every wall — nature is your wallpaper, 360 degrees around.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 4200,
+        location: "Torres del Paine",
+        country: "Chile",
+        category: "domes",
+        reviews: [],
+        owner: "69c51e90948ab9b69d484718",
+        geometry: { type: "Point", coordinates: [-72.9300, -51.0000] }
+    },
+ 
+    // 14. farms
+    {
+        title: "Tea Estate Bungalow in Munnar",
+        description: "A colonial-era planter's bungalow sitting atop rolling tea gardens in Kerala's misty highlands. Watch tea pickers at work, take a factory tour, and sip freshly brewed tea on your wraparound veranda.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 850,
+        location: "Munnar",
+        country: "India",
+        category: "farms",
+        reviews: [],
+        owner: "69c928d53ace3d6ffd5553c7",
+        geometry: { type: "Point", coordinates: [77.0595, 10.0889] }
+    },
+ 
+    // 15. castles
+    {
+        title: "Moorish Castle Riad in Marrakech",
+        description: "A lavish 400-year-old riad palace hidden behind ornate cedar doors in Marrakech's ancient medina. Mosaic courtyards, a hammam, rooftop terraces, and handcrafted rooms transport you to a golden era.",
+        image: {
+            filename: "listingimage",
+            url: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400&auto=format&fit=crop&q=60"
+        },
+        price: 3100,
+        location: "Marrakech",
+        country: "Morocco",
+        category: "castles",
+        reviews: [],
+        owner: "69c924b8eb03dabef49282fc",
+        geometry: { type: "Point", coordinates: [-7.9811, 31.6295] }
     }
 ];
 
