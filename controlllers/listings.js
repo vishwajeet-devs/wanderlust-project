@@ -10,7 +10,10 @@ module.exports.index = async (req, res, next) => {
 
     if (search) {
         allListings = await Listing.find({
-            title: { $regex: `^${search}`, $options: "i" }
+            $or: [
+                { title: { $regex: "^" + search, $options: "i" } },
+                { location: { $regex: "^" + search, $options: "i" } }
+            ]
         });
     } 
     else if (category) {
@@ -20,7 +23,7 @@ module.exports.index = async (req, res, next) => {
         allListings = await Listing.find({});
     }
 
-    res.render("listings/index.ejs", { allListings, search });
+    res.render("listings/index.ejs", { allListings, search, category });
 };
 
 module.exports.renderNewForm = (req, res) => {

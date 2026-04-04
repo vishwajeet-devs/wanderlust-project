@@ -17,12 +17,18 @@
 
             .filter:hover {
                 opacity: 1;
+                color: #fe424d;
                 cursor: pointer;
             }
 
             #filters a {
                 text-decoration: none;
                 color: inherit;
+            }
+            
+            .filter.active {
+                opacity: 1;
+                color: #fe424d;
             }
 
             .tax-info {
@@ -44,77 +50,77 @@
         </style>
 
         <div id="filters">
-            <div class="filter">
+            <div class="filter <%= category === 'all' ? 'active' : '' %>">
                 <a href="/listings">
                     <div><i class="fa-solid fa-fire"></i></div>
                     <p>All</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'room' ? 'active' : '' %>">
                 <a href="/listings?cat=room">
                     <div><i class="fa-solid fa-bed"></i></div>
                     <p>Room</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'iconicCities' ? 'active' : '' %>">
                 <a href="/listings?cat=iconicCities">
                     <div><i class="fa-solid fa-mountain-city"></i></div>
                     <p>Iconic Cities</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'mountains' ? 'active' : '' %>">
                 <a href="/listings?cat=mountains">
                     <div><i class="fa-solid fa-mountain"></i></div>
                     <p>Mountains</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'castles' ? 'active' : '' %>">
                 <a href="/listings?cat=castles">
                     <div><i class="fa-brands fa-fort-awesome"></i></div>
                     <p>Castles</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'amazingpools' ? 'active' : '' %>">
                 <a href="/listings?cat=amazingpools">
                     <div><i class="fa-solid fa-person-swimming"></i></div>
                     <p>Amazing pools</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'camping' ? 'active' : '' %>">
                 <a href="/listings?cat=camping">
                     <div><i class="fa-solid fa-campground"></i></div>
                     <p>Camping</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'farms' ? 'active' : '' %>">
                 <a href="/listings?cat=farms">
                     <div><i class="fa-solid fa-cow"></i></div>
                     <p>Farms</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'arctic' ? 'active' : '' %>">
                 <a href="/listings?cat=arctic">
                     <div><i class="fa-solid fa-snowflake"></i></div>
                     <p>Arctic</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'domes' ? 'active' : '' %>">
                 <a href="/listings?cat=domes">
                     <div><i class="fa-solid fa-igloo"></i></div>
                     <p>Domes</p>
                 </a>
             </div>
 
-            <div class="filter">
+            <div class="filter <%= category === 'boats' ? 'active' : '' %>">
                 <a href="/listings?cat=boats">
                     <div><i class="fa-solid fa-sailboat"></i></div>
                     <p>Boats</p>
