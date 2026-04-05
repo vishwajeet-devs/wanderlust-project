@@ -1,0 +1,47 @@
+<%- layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+            <% if(allListings.length==0) { %>
+                <div class="d-flex justify-content-center align-items-center w-100" style="height: 60vh;">
+                    <h1 style="color: rgb(165, 165, 165)">Listing not found !</h1>
+                </div>          
+            <% } %>
+            <% for(let listing of allListings) { %>
+                <a href="/listings/<%=listing._id%>" class="listing-link">
+                    <div class="card col listing-card" style="width: 18rem;">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_img"
+                            style="height: 10rem">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b><%= listing.title %></b><br>
+                                &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+                                <b class="tax-info"> &nbsp; &nbsp;+18% GST </b>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+    </body>
+
+    <script>
+        let taxSwitch = document.getElementById("switchCheckDefault");
+        taxSwitch.addEventListener("click", () => {
+            let taxInfo = document.getElementsByClassName("tax-info");
+            for(info of taxInfo){
+                if(info.style.display != "inline") info.style.display = "inline";
+                else info.style.display = "none";
+            }
+        })
+
+        const input = document.querySelector(".search-input");
+
+        input.addEventListener("input", () => {
+            if (input.value === "") {
+                input.form.submit();
+            }
+        });
+
+    </script>

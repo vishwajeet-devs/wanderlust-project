@@ -11,8 +11,8 @@ module.exports.index = async (req, res, next) => {
     if (search) {
         allListings = await Listing.find({
             $or: [
-                { title: { $regex: "^" + search, $options: "i" } },
-                { location: { $regex: "^" + search, $options: "i" } }
+                { title: { $regex: search, $options: "i" } },
+                { location: { $regex: search, $options: "i" } }
             ]
         });
     } 
@@ -24,6 +24,23 @@ module.exports.index = async (req, res, next) => {
     }
 
     res.render("listings/index.ejs", { allListings, search, category });
+};
+
+module.exports.showMyListing = async (req, res) => {
+    let search = req.query.search?.trim();
+
+    let query = {
+        owner: req.user._id
+    };
+
+    if (search) {
+        query.$or = [
+            { title: { $regex: "^" + search, $options: "i" } },
+            { location: { $regex: "^" + search, $options: "i" } }
+        ];
+    }
+    let allListings = await Listing.find(query);
+    res.render("listings/my.ejs", { allListings });
 };
 
 module.exports.renderNewForm = (req, res) => {
